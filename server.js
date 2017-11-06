@@ -57,6 +57,9 @@ app.get('/fetch', function(request, response){
 // end of GET
 
 // set up the server into action //
+// let the PROCESS choose the PORT //
+// if process.env.PORT, Heroku chosen PORT doesn't exist, it defaults to 3000
+var port = process.env.PORT || 3000
 server.listen(3000, function(){
-  console.log("server is running u better go catch it")
+  console.log("server is running u better go catch it - its going " + port + "mph!")
 })
